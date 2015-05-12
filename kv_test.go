@@ -16,6 +16,8 @@ const (
 )
 
 func setUp(t *testing.T) (*Client, *server.App) {
+	os.RemoveAll(testDBDataDir)
+
 	ledisCfg := config.NewConfigDefault()
 	ledisCfg.Addr = testDBAddr
 	ledisCfg.DataDir = testDBDataDir
