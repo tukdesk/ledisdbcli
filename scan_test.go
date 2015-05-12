@@ -9,8 +9,8 @@ import (
 )
 
 func TestKVScan(t *testing.T) {
-	c := setUp(t)
-	defer tearDown(c)
+	c, app := setUp(t)
+	defer tearDown(c, app)
 
 	count := 10
 	for i := 0; i < count; i++ {
