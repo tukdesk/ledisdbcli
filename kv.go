@@ -11,7 +11,7 @@ func (this *Client) Set(key interface{}, value []byte) error {
 		return err
 	}
 
-	if reply != "OK" {
+	if reply != ReplyOK {
 		return newError(reply)
 	}
 
