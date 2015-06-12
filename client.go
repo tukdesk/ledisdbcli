@@ -4,10 +4,6 @@ import (
 	"github.com/tukdesk/goredis"
 )
 
-const (
-	defaultIMaxdleConns = 4
-)
-
 type Client struct {
 	c   *goredis.Client
 	cfg Config
